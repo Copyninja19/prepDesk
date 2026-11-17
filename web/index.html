@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="workspace-scope" content="">
+<meta name="theme-color" content="#fafafa">
+<meta name="description" content="Plan your prep, manage exams, and keep a daily food log.">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="/icon-192.png">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/shell.css">
+<title>Prep Desk</title>
+<script src="/preferences.js"></script>
+</head>
+<body>
+<aside class="sidebar" aria-label="Desktop sidebar">
+<a class="brand" href="#dashboard"><img class="brand-icon" src="/icon-192.png" alt="" width="32" height="32"> Prep Desk</a>
+<nav id="desktopNav" aria-label="Workspace"></nav>
+<footer><strong id="initials" aria-hidden="true"></strong><span id="displayName">Your profile</span></footer>
+</aside>
+<main>
+<header class="topbar">
+<a class="mobile-brand" href="#dashboard"><img class="brand-icon" src="/icon-192.png" alt="" width="32" height="32"> Prep Desk</a>
+<div id="date"></div>
+<div class="top-actions"><button type="button" id="themeToggle" aria-label="Switch theme" class="plain"></button><button type="button" id="log" aria-label="Log activity"><span aria-hidden="true">＋</span> <span class="log-label">Log activity</span></button></div>
+</header>
+<div id="view"></div>
+<div class="storage" role="status">Connecting to your workspace…</div>
+<section class="card recovery" id="recovery" tabindex="-1" aria-labelledby="recovery-title" hidden>
+<h2 id="recovery-title">Recover unsynced edits</h2>
+<p>Download your drafts before discarding or replacing a version. A workspace deleted on another device cannot be restored here.</p>
+<div class="recovery-actions" data-recovery-controls></div>
+</section>
+</main>
+<nav class="bottom-nav" id="mobileNav" aria-label="Mobile workspace"></nav>
+<dialog id="moreMenu" aria-labelledby="moreTitle"><div class="barhead"><h2 id="moreTitle">More</h2><button class="plain" id="closeMore" aria-label="Close menu">✕</button></div><nav id="moreNav" aria-label="More pages"></nav></dialog>
+<dialog id="dialog" aria-labelledby="formTitle"><form id="form"><h2 id="formTitle"></h2><div id="fields"></div><div class="actions"><button type="button" class="plain" id="cancel">Cancel</button><button>Save</button></div></form></dialog>
+<script src="/sync.js"></script>
+</body>
+</html>
